@@ -16,8 +16,12 @@ const Header = () => {
 
     const navItems = <>
         <li> <Link to="/">Home</Link> </li>
+        <li> <Link to="/allToys">All Toy</Link> </li>
         <li> <Link to="/blog">Blog</Link> </li>
-        <li> <Link to="/about">About</Link> </li>
+        {user && <>
+            <li> <Link to="/myToys">My Toy</Link> </li>
+            <li> <Link to="/addToy">Add Toy</Link> </li>
+        </>}
         {/* {user?.email ? <>
             <li>
                 <div className='w-24 rounded-full'>

@@ -13,6 +13,9 @@ import Register from './components/Register/Register.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import Blog from './components/Blog/Blog.jsx';
 import PrivateRoute from './route/PrivateRoute.jsx';
+import AllToys from './components/AllToys/AllToys.jsx';
+import AddToy from './components/AddToy/AddToy.jsx';
+import MyToys from './components/MyToys/MyToys.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +38,19 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>
       },
+      {
+        path: '/allToys',
+        element: <AllToys></AllToys>
+      },
+      {
+        path: '/addToy',
+        element: <AddToy></AddToy>
+      },
+      {
+        path: '/myToys',
+        element: <MyToys></MyToys>
+      },
+      
     ]
   },
 ]);

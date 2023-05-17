@@ -9,6 +9,7 @@ const Home = () => {
     if (loading) {
         return <Loader></Loader>
     }
+
     return (
         <div>
             <h2>Hello from home</h2>

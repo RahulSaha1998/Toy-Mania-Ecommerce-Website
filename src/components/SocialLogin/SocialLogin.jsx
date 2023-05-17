@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { FaBeer, FaGoogle } from 'react-icons/fa';
 
 const SocialLogin = () => {
 
@@ -27,8 +28,9 @@ const SocialLogin = () => {
         <div>
             <div className="divider">OR</div>
             <div className="text-center">
-                <button onClick={handleGoogleSignIn} className="btn btn-circle btn-outline">
-                    G
+                <button onClick={handleGoogleSignIn} className="btn btn-outline btn-info">
+                    <FaGoogle className='m-1' />
+                    signin with google
                 </button>
             </div>
         </div>

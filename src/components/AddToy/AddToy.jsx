@@ -32,7 +32,7 @@ const AddToy = () => {
         };
         console.log(addedToy);
 
-        fetch('http://localhost:5000/addedToy',{
+        fetch('http://localhost:5000/toys',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +41,7 @@ const AddToy = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            console.log(data)
             if (data.insertedId) {
                 Swal.fire({
                     title: 'Success!',
@@ -57,7 +57,7 @@ const AddToy = () => {
     return (
         <div className='bg-slate-300 rounded-lg shadow-cl mt-5'>
             <div className='text-center'>
-                <h2 className='text-3xl font-bold'>Ad Your Toy</h2>
+                <h2 className='text-3xl font-bold'>Add Your Toy</h2>
                 <div className="divider"></div>
             </div>
             <form onSubmit={handleAddToy} className='w-[80%] mx-auto '>

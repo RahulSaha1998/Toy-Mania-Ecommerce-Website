@@ -18,8 +18,6 @@ const MyToys = () => {
     },[])
 
 
-
-
     const handelDelete = (_id) => {
         Swal.fire({
             title: 'Are you sure that you want to delete?',
@@ -48,8 +46,6 @@ const MyToys = () => {
                             setMyToys(remaining);
                         }
                     })
-
-
             }
         })
     }

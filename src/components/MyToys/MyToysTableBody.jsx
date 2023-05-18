@@ -25,7 +25,8 @@ const MyToysTableBody = ({ m_toy, handelDelete }) => {
                 <td className='bg-pink-300 text-center'>{category}</td>
                 <td className='bg-cyan-400 text-center'>{'$' + price}</td>
                 <td className='bg-pink-300 text-center'>{quantity}</td>
-                <td className=' text-center rounded-lg'><Link to={`/details/${_id}`}>
+                <td className=' text-center rounded-lg'>
+                    <Link to={`/update/${_id}`}>
                     <button onClick={() => handleViewDetails(_id)} className='btn btn-outline btn-danger'>Edit</button>
                 </Link></td>
                 <td className='b text-center rounded-lg'>

@@ -54,7 +54,7 @@ const MyToys = () => {
     return (
         <div className="overflow-x-auto shadow-xl">
             <div className='text-center text-3xl font-bold mb-5'>
-                <h2>All Toys</h2>
+                <h2>My Toys</h2>
             </div>
             <table className="table w-full">
                 <thead>

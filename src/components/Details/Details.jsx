@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaArrowLeft, FaBackspace, FaBackward, FaRegStar, FaStar } from 'react-icons/fa';
+import { FaArrowLeft, FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { Link, useLoaderData } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';

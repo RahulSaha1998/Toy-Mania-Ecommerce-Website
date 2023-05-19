@@ -3,6 +3,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import Loader from '../Loader/Loader';
 import Banner from '../Banner/Banner';
 import CategoryTab from '../CategoryTab/CategoryTab';
+import Gallery from '../Gallery/Gallery';
 
 const Home = () => {
 
@@ -16,6 +17,9 @@ const Home = () => {
         <div>
             <div>
                 <Banner></Banner>
+            </div>
+            <div>
+                <Gallery></Gallery>
             </div>
             <div>
                 <CategoryTab></CategoryTab>

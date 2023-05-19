@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import Lottie from "lottie-react";
+import g2 from '../../../public/g2.json'
 
 const Header = () => {
 
@@ -48,7 +50,14 @@ const Header = () => {
                     </ul>
                 </div>
 
-                <img className='w-16 rounded-lg' src='https://i.ibb.co/LR43VfL/ab26d80c8ad3a107eaf53b11b9fd9797.jpg' alt="" />
+                <div className='flex items-center'>
+                    <div className='text center m-4'>
+                        <Lottie className='w-24' animationData={g2}></Lottie>
+                    </div>
+                    <div className='w-52'>
+                        <h2 className='font-bold text-3xl'>TOY <span className='text-red-500'>Mania</span></h2>
+                    </div>
+                </div>
 
             </div>
             <div className="navbar-center hidden lg:flex">

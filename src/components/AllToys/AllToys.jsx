@@ -8,27 +8,23 @@ const AllToys = () => {
 
     const { user, loading } = useContext(AuthContext);
     const loadedToys = useLoaderData();
+    
     const [searchText, setSearchText] = useState('');
-    const [toys, setToys] = useState([]);
-    const [limit, setLimit] = useState(20);
+    const [toys, setToys] = useState(loadedToys);
 
-    const limitedToys = loadedToys.slice(0, limit);
-
-    useEffect(() => {
-        setToys(limitedToys)
-    }, [])
 
     if (loading) {
         return <Loader></Loader>
     }
 
-    const handleSearch = () => {
+    const handleSearch = () => {   
         fetch(`http://localhost:5000/toySearch/${searchText}`)
             .then(res => res.json())
             .then(data => {
                 setToys(data)
             })
-    }
+        }
+
 
     return (
         <div className="overflow-x-auto shadow-xl">

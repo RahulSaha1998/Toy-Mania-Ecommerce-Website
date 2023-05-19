@@ -63,7 +63,7 @@ const Header = () => {
 
                             <div className=' w-12 mt-1'>
                                 <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-                                    <img className='rounded-full' src={user?.photoURL} alt="" />
+                                    <img className='rounded-full cursor-pointer' src={user?.photoURL} alt="" />
                                 </div>
                             </div>
 

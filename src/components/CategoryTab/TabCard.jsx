@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2';
+
 
 const TabCard = ({ r_data }) => {
 
     const { _id, category, price, quantity, details, seller_name, product_name, photoURL, email, rating } = r_data;
+
+    const {user} = useContext(AuthContext);
+
+
+    const handleDetails = (_id) => {
+        console.log(_id);
+        {
+            !user &&
+            Swal.fire({
+                position: 'top-bottom',
+                icon: 'error',
+                title: 'Your have to login first!',
+                showConfirmButton: false,
+                timer: 1500
+              })
+        
+        }
+    }
 
 
     return (
@@ -37,16 +58,9 @@ const TabCard = ({ r_data }) => {
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
                     <div className="card-actions">
                         <Link to={`/details/${_id}`}>
-                            <button onClick={() => handleViewDetails(_id)} className='btn btn-outline btn-danger'>View Details</button>
+                            <button onClick={() => handleDetails(_id)} className='btn btn-outline btn-danger'>View Details</button>
                         </Link>
                     </div>
                 </div>

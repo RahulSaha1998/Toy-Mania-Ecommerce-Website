@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const AllToyTableBody = ({ toy, index }) => {
+
     const { _id, category, price, quantity, details, seller_name, product_name } = toy;
+
+    const {user} = useContext(AuthContext);
 
     const handleViewDetails = (_id) => {
         console.log(_id);
+        {
+            !user &&
+            Swal.fire({
+                position: 'top-bottom',
+                icon: 'error',
+                title: 'Your have to login first!',
+                showConfirmButton: false,
+                timer: 1500
+              })
+        
+        }
     }
 
     return (

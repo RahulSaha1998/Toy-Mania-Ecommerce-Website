@@ -5,7 +5,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const Register = () => {
 
-    const [error, setError] = useState('')
+    const [errors, setError] = useState('')
     const [success, setSuccess] = useState('');
 
     const { registerUser, logOut, updateUserData } = useContext(AuthContext)
@@ -40,6 +40,8 @@ const Register = () => {
             })
             .catch(error => {
                 console.log(error);
+                setError('Try again there is something missing!')
+
             })
 
     }
@@ -56,7 +58,8 @@ const Register = () => {
                             </label>
                             <input type="text" placeholder="name"
                                 name='name'
-                                className="input input-bordered" />
+                                className="input input-bordered"
+                                required />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -81,22 +84,23 @@ const Register = () => {
                             </label>
                             <input type="password" placeholder="password"
                                 name='password'
-                                className="input input-bordered" 
-                                required/>
+                                className="input input-bordered"
+                                required />
+                        </div>
+                        <div className='text-center mt-2'>
+                            {
+                                <p className='text-red-700'>{errors}</p>
+                            }
+                            {
+                                <p className='text-blue-600'>{success}</p>
+                            }
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Register</button>
                         </div>
-                        <div className='text-center mt-2'>
-                        {
-                            <p className='text-red-700'>{error}</p>
-                        }
-                        {
-                            <p className='text-blue-600'>{success}</p>
-                        }
-                        </div>
+
                     </form>
-                    <p className='my-4 text-center'>Already Have an account <Link className='text-orange-600 font-bold' to="/login">Login</Link> </p>
+                    <p className='my-4 text-center'>Already Have an account? <Link className='text-orange-600 font-bold' to="/login">Login</Link> </p>
                     <SocialLogin></SocialLogin>
                 </div>
             </div>

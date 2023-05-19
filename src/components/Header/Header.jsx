@@ -18,23 +18,12 @@ const Header = () => {
 
     const navItems = <>
         <li> <Link to="/">Home</Link> </li>
-        <li> <Link to="/allToys">All Toy</Link> </li>
-        <li> <Link to="/blog">Blog</Link> </li>
+        <li> <Link to="/allToys">All Toys</Link> </li>
         {user && <>
-            <li> <Link to="/myToys">My Toy</Link> </li>
-            <li> <Link to="/addToy">Add Toy</Link> </li>
+            <li> <Link to="/myToys">My Toys</Link> </li>
+            <li> <Link to="/addToy">Add a Toy</Link> </li>
         </>}
-        {/* {user?.email ? <>
-            <li>
-                <div className='w-24 rounded-full'>
-                    <img src={user?.photoURL} alt="" className='rounded-full' />
-                </div>
-            </li>
-            <li><button className='btn btn-primary' onClick={handleLogOut}>Log out</button></li>
-        </>
-            : <li> <Link to="/login">Login</Link> </li>
-        } */}
-
+        <li> <Link to="/blog">Blog</Link> </li>
 
     </>
 

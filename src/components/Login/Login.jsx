@@ -56,7 +56,8 @@ const Login = () => {
                             </label>
                             <input type="text" placeholder="email"
                                 name='email'
-                                className="input input-bordered" />
+                                className="input input-bordered" 
+                                required/>
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -64,18 +65,20 @@ const Login = () => {
                             </label>
                             <input type="password" placeholder="password"
                                 name='password'
-                                className="input input-bordered" />
+                                className="input input-bordered" 
+                                required/>
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
+                        <div className='text-center'>
+                            <p className='text-red-600'>{error}</p>
+                            <p className='text-cyan-700'>{success}</p>
+                        </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
-                        <div className='text-center'>
-                            <p className='text-danger'>{error}</p>
-                            <p className='text-success'>{success}</p>
-                        </div>
+                        
                     </form>
                     <p className='my-4 text-center'>New to this site? <Link className='text-orange-600 font-bold' to="/register">Register</Link> </p>
                     <SocialLogin></SocialLogin>

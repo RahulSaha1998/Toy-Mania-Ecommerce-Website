@@ -5,15 +5,14 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const Update = () => {
     const toy = useLoaderData();
-    console.log(toy);
-    const { _id, category, price, quantity, details, seller_name, product_name, photoURL, email, rating } = toy;
+    const { _id, price, quantity, details } = toy;
 
     const { user } = useContext(AuthContext);
 
     const handleUpdatedToy = (event) => {
         event.preventDefault();
         const form = event.target;
-        const price = form.price.value;
+        const price = parseInt(form.price.value);
         const quantity = form.quantity.value;
         const details = form.details.value;
 
@@ -22,7 +21,6 @@ const Update = () => {
             quantity, 
             details 
         };
-        console.log(updatedToy);
 
         fetch(`http://localhost:5000/toys/${_id}`,{
             method: 'PUT',

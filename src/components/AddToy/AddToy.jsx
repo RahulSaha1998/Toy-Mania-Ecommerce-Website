@@ -14,7 +14,7 @@ const AddToy = () => {
         const seller_name = user?.displayName;
         const email = user?.email;
         const category = form.category.value;
-        const price = form.price.value;
+        const price = parseInt(form.price.value);
         const rating = form.rating.value;
         const quantity = form.quantity.value;
         const details = form.details.value;

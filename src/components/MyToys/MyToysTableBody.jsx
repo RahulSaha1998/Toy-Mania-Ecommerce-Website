@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const MyToysTableBody = ({ m_toy, handelDelete }) => {
+const MyToysTableBody = ({ m_toy, handelDelete, handelEdit }) => {
 
     const { _id, category, price, quantity, details, seller_name, product_name, photoURL } = m_toy;
 
@@ -27,10 +27,10 @@ const MyToysTableBody = ({ m_toy, handelDelete }) => {
                 <td className='text-center'>{quantity}</td>
                 <td className='text-center rounded-lg'>
                     <Link to={`/update/${_id}`}>
-                    <button onClick={() => handleViewDetails(_id)} className='btn btn-outline btn-danger'>Edit</button>
+                    <button onClick={() => handelEdit(_id)} className='btn btn-outline btn-primary'>Edit</button>
                 </Link></td>
                 <td className='b text-center rounded-lg'>
-                    <button onClick={() => handelDelete(_id)} className='btn btn-outline btn-danger'>Delete</button>
+                    <button onClick={() => handelDelete(_id)} className='btn btn-outline btn-error'>Delete</button>
                 </td>
             </tr>
         </>

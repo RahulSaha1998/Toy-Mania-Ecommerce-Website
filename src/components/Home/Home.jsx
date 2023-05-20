@@ -7,6 +7,7 @@ import Gallery from '../Gallery/Gallery';
 import useTitle from '../../hooks/useTitile';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import Animations from '../Animations/Animations';
 
 
 const Home = () => {
@@ -14,9 +15,9 @@ const Home = () => {
     const { user, loading } = useContext(AuthContext);
     useTitle('Home')
 
-    useEffect(()=>{
-        Aos.init({duration: 2000});
-    },[])
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, [])
 
 
     if (loading) {
@@ -25,14 +26,17 @@ const Home = () => {
 
     return (
         <div>
-            <div className='overflow-hidden rounded-lg shadow-xl' data-aos ="fade-right">
+            <div className='overflow-hidden rounded-lg shadow-xl' data-aos="fade-right">
                 <Banner></Banner>
             </div>
-            <div className='overflow-hidden' data-aos ="fade-left">
-                <Gallery></Gallery>
+            <div className='overflow-hidden' data-aos="fade-left">
+                <Animations></Animations>
             </div>
-            <div className='overflow-hidden' data-aos ="fade-down">
+            <div className='overflow-hidden' data-aos="fade-down">
                 <CategoryTab></CategoryTab>
+            </div>
+            <div className='overflow-hidden' data-aos="fade-left">
+                <Gallery></Gallery>
             </div>
         </div>
     );

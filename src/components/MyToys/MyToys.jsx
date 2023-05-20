@@ -192,7 +192,7 @@ const MyToys = () => {
       </div>
       <div className='text-center mb-5'>
         <button
-          className={`btn btn-outline btn-primary ${sortOrder === 1 ? "active" : ""}`}
+          className={`btn ${sortOrder === 1 ? "btn-info" : "btn-success"} ${sortOrder === 1 ? "active" : ""}`}
           onClick={handelSortClick}
         >
           Sort by {sortOrder === 1 ? "Ascending" : "Descending"}

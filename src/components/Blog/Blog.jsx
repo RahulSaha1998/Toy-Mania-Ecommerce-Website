@@ -15,6 +15,8 @@ const Blog = () => {
         <div className='m-10'>
             <div className="card w-full h-auto bg-base-100 m-auto shadow-xl">
                 <div className="card-body">
+                    <h2 className='text-center text-2xl font-bold'>Question Answer Session</h2>
+                    <hr />
                     <div data-aos ="fade-right">
                         <h2 className="card-title text-red-600">Ques 1: What is an access token and refresh token? How do they work and where should we store them on the client-side?</h2>
                         <p>Ans: Without the user having to repeatedly provide their login information, a refresh token simply allow us to re-validate the user. In the event that the refresh token is legitimate and requests access to private resources, the access token is reissued. And we can store the access token and refresh token in local storage or we can store in sessions.</p>

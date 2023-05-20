@@ -40,11 +40,11 @@ const Header = () => {
                 </div>
 
                 <div className='flex items-center'>
-                    <div className='text center m-4'>
+                    <div className='text center lg:m-4'>
                         <Lottie className='w-24' animationData={g2}></Lottie>
                     </div>
-                    <div className='w-52'>
-                        <h2 className='font-bold text-3xl'>TOY <span className='text-red-500'>Mania</span></h2>
+                    <div className='w-14 lg:w-52  '>
+                        <h2 className='font-bold lg:text-3xl'>TOY <span className='text-red-500'>Mania</span></h2>
                     </div>
                 </div>
 
@@ -59,13 +59,14 @@ const Header = () => {
                     {
                         user?.email ? <>
 
-                            <div className=' w-12 mt-1'>
-                                <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-                                    <img className='rounded-full cursor-pointer' src={user?.photoURL} alt="" />
+                                <div className=' w-12 mt-1'>
+                                    <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
+                                        <img className='rounded-full cursor-pointer' src={user?.photoURL} alt="" />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <button className='btn btn-outline' onClick={handleLogOut}>Log out</button>
+                                <button className='btn btn-outline' onClick={handleLogOut}>Log out</button>
+
                         </>
                             : <Link to="/login"><button className='btn btn-outline'>Login</button></Link>
                     }

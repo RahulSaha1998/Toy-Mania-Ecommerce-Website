@@ -25,13 +25,13 @@ const Home = () => {
 
     return (
         <div>
-            <div data-aos ="fade-right">
+            <div className='overflow-hidden' data-aos ="fade-right">
                 <Banner></Banner>
             </div>
-            <div data-aos ="fade-left">
+            <div className='overflow-hidden' data-aos ="fade-left">
                 <Gallery></Gallery>
             </div>
-            <div data-aos ="fade-down">
+            <div className='overflow-hidden' data-aos ="fade-down">
                 <CategoryTab></CategoryTab>
             </div>
         </div>

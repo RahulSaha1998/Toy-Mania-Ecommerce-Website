@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { AuthContext } from '../../providers/AuthProvider';
+import useTitle from '../../hooks/useTitile';
 
 const Login = () => {
     const [error, setError] = useState('')
@@ -11,7 +12,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    // console.log(location);
+    useTitle('Login')
 
     const from = location.state?.from?.pathname || '/';
 

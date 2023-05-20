@@ -3,11 +3,13 @@ import AllToyTableBody from './AllToyTableBody';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import Loader from '../Loader/Loader';
+import useTitle from '../../hooks/useTitile';
 
 const AllToys = () => {
 
     const { user, loading } = useContext(AuthContext);
     const loadedToys = useLoaderData();
+    useTitle('All Toys')
     
     const [searchText, setSearchText] = useState('');
     const [toys, setToys] = useState(loadedToys);

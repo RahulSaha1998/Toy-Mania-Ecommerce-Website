@@ -4,12 +4,15 @@ import Rating from 'react-rating';
 import { Link, useLoaderData } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../../hooks/useTitile';
 
 
 const Details = () => {
 
     const toy = useLoaderData();
-    console.log(toy);
+    useTitle('View Details')
+    
+
     const { _id, category, price, quantity, details, seller_name, product_name, photoURL, email, rating } = toy;
 
     const handleFavoriteButton = () => {

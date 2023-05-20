@@ -2,12 +2,15 @@ import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../providers/AuthProvider';
+import useTitle from '../../hooks/useTitile';
 
 const Update = () => {
     const toy = useLoaderData();
     const { _id, price, quantity, details } = toy;
 
     const { user } = useContext(AuthContext);
+    useTitle('Update Toy')
+
 
     const handleUpdatedToy = (event) => {
         event.preventDefault();

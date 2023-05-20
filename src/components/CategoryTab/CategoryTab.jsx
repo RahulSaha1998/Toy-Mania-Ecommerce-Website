@@ -23,34 +23,34 @@ const CategoryTab = () => {
     };
 
     return (
-        <div className='text-center mt-5 mb-5'>
-            <h2 className='text-3xl'>Categories</h2>
+        <div className='text-center mt-10 mb-5'>
+            <h2 className='text-3xl mb-5 text-red-600 font-semibold'>Sub-Categories</h2>
             <Tabs>
                 <TabList>
                     <Tab>
                         <div
                             onClick={() => handleTabClick("car")}
                         >
-                            Sub Category 1
+                            <button className='btn btn-info'>Category-Car</button>
                         </div>
                     </Tab>
                     <Tab>
                         <div
                             onClick={() => handleTabClick("bike")}
                         >
-                            Sub Category 2
+                            <button className='btn btn-success'>Category-Bike</button>
                         </div>
                     </Tab>
                     <Tab>
                         <div
                             onClick={() => handleTabClick("truck")}
                         >
-                            Sub Category 3
+                            <button className='btn btn-warning'>Category-Truck</button>
                         </div>
                     </Tab>
                 </TabList>
 
-                <TabPanel className='bg-red-400 rounded-xl shadow-xl'>
+                <TabPanel className='bg-slate-300 rounded-lg shadow-xl'>
                     <div className='grid lg:grid-cols-3 gap-5 p-10'>
                         {
                             result.slice(0, 3).map(r_data => <TabCard

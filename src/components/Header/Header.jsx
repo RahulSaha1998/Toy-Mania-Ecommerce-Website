@@ -28,7 +28,7 @@ const Header = () => {
     </>
 
     return (
-        <div className="navbar h-28 mb-4 bg-slate-200 rounded-lg shadow-xl">
+        <div className="navbar h-28 mb-4 bg-slate-100 rounded-lg shadow-xl">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -44,7 +44,7 @@ const Header = () => {
                         <Lottie className='w-24' animationData={g2}></Lottie>
                     </div>
                     <div className='w-14 lg:w-52  '>
-                        <h2 className='font-bold lg:text-3xl'>TOY <span className='text-red-500'>Mania</span></h2>
+                        <h2 className='font-bold lg:text-3xl'>TOY <span className='text-red-600 font-semibold'>Mania</span></h2>
                     </div>
                 </div>
 

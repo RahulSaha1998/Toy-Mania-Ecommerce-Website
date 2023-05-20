@@ -31,7 +31,7 @@ const TabCard = ({ r_data }) => {
 
     return (
         <div>
-            <div className="card w-full h-full bg-base-100 shadow-xl">
+            <div className="card w-full h-full bg-slate-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={photoURL} alt="Shoes" className="rounded-xl h-52" />
                 </figure>
@@ -58,6 +58,7 @@ const TabCard = ({ r_data }) => {
                             </div>
                         </div>
                     </div>
+                    
                     <div className="card-actions">
                         <Link to={`/details/${_id}`}>
                             <button onClick={() => handleDetails(_id)} className='btn btn-outline btn-danger'>View Details</button>

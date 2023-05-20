@@ -25,7 +25,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className='overflow-hidden' data-aos ="fade-right">
+            <div className='overflow-hidden rounded-lg shadow-xl' data-aos ="fade-right">
                 <Banner></Banner>
             </div>
             <div className='overflow-hidden' data-aos ="fade-left">

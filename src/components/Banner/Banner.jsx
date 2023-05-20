@@ -5,10 +5,10 @@ import g4 from '../../../public/g4.json'
 
 const Banner = () => {
     return (
-      <div className='md:grid grid-cols-2 justify-center p-5 card shadow-xl bg-slate-100'>
+      <div className='md:grid grid-cols-2 justify-center p-5 card bg-slate-100'>
       <div className='m-5'>
           <div className='lg:mt-20 lg:grid grid-rows-1 justify-center'>
-              <h4 className='text-start text-4xl font-semibold'>Toys Can Make <br /> Our Childhood <br /> <span className='text-cyan-500'>Memorable!</span></h4>
+              <h4 className='text-start text-4xl font-semibold'>Toys Can Make <br /> Our Childhood <br /> <span className='text-red-600'>Memorable!</span></h4>
               <p className='mt-3 text-start'>
               Toys are important, formative components in children's lives. They entertain as well as teach, and they may do both with positive and negative consequences.
               </p>

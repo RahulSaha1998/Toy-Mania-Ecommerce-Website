@@ -25,7 +25,7 @@ const Header = () => {
             <li> <Link className='font-semibold' to="/myToys">My Toys</Link> </li>
             <li> <Link className='font-semibold' to="/addToy">Add a Toy</Link> </li>
         </>}
-        <li> <Link className='font-semibold' to="/blogs">Blog</Link> </li>
+        <li> <Link className='font-semibold' to="/blogs">Blogs</Link> </li>
     </>
 
     const btn = <>

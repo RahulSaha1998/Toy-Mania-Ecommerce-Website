@@ -93,7 +93,7 @@ const MyToys = () => {
             <th className='text-center'>Sub-Category</th>
             <th className='text-center'>Price</th>
             <th className='text-center'>Quantity</th>
-            <th className='text-center'>Edit</th>
+            <th className='text-center'>Update</th>
             <th className='text-center'>Delete</th>
           </tr>
         </thead>

@@ -41,7 +41,7 @@ const Header = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {navItems}
-                        {btn}
+                        {user && btn}
                     </ul>
                 </div>
 
@@ -49,7 +49,7 @@ const Header = () => {
                     <div className='text center lg:m-4'>
                         <Lottie className='w-24' animationData={g2}></Lottie>
                     </div>
-                    <div className='w-14 lg:w-52 sm:hidden'>
+                    <div className='w-14 lg:w-52'>
                         <h2 className='font-bold lg:text-3xl'>TOY <span className='text-red-600 font-semibold'>Mania</span></h2>
                     </div>
                 </div>

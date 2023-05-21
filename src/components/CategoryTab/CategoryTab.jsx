@@ -60,20 +60,20 @@ const CategoryTab = () => {
                         }
                     </div>
                 </TabPanel>
-                <TabPanel className='bg-red-400 rounded-xl shadow-xl'>
-                    <div className='grid lg:grid-cols-2 gap-5 p-10'>
+                <TabPanel className='bg-slate-300 rounded-xl shadow-xl'>
+                    <div className='grid lg:grid-cols-3 gap-5 p-10'>
                         {
-                            result.slice(0, 2).map(r_data => <TabCard
+                            result.slice(0, 3).map(r_data => <TabCard
                                 key={r_data._id}
                                 r_data={r_data}
                             ></TabCard>)
                         }
                     </div>
                 </TabPanel>
-                <TabPanel className='bg-red-400 rounded-xl shadow-xl'>
-                    <div className='grid lg:grid-cols-2 gap-5 p-10'>
+                <TabPanel className='bg-slate-300 rounded-xl shadow-xl'>
+                    <div className='grid lg:grid-cols-3 gap-5 p-10'>
                         {
-                            result.slice(0, 2).map(r_data => <TabCard
+                            result.slice(0, 3).map(r_data => <TabCard
                                 key={r_data._id}
                                 r_data={r_data}
                             ></TabCard>)

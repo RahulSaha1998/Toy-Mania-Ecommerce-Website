@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { FaRegStar, FaStar } from 'react-icons/fa';
+import { FaArrowRight, FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
@@ -61,7 +61,7 @@ const TabCard = ({ r_data }) => {
                     
                     <div className="card-actions">
                         <Link to={`/details/${_id}`}>
-                            <button onClick={() => handleDetails(_id)} className='btn btn-outline btn-danger'>View Details</button>
+                            <button onClick={() => handleDetails(_id)} className='btn btn-info gap-2'>View Details <FaArrowRight/></button>
                         </Link>
                     </div>
                 </div>

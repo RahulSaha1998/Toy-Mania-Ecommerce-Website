@@ -5,7 +5,7 @@ import g2 from '../../../public/g2.json'
 const Footer = () => {
     return (
         <div>
-            <footer className="footer footer-center p-10 bg-slate-800 text-primary-content">
+            <footer className="footer footer-center p-10 bg-slate-800 text-primary-content rounded-lg shadow-lg">
                 <div>
                 <Lottie className='w-24' animationData={g2}></Lottie>
                     <p className="font-bold">

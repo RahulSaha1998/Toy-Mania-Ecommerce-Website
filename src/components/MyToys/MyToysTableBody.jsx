@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const MyToysTableBody = ({ m_toy, handelDelete, handelEdit }) => {
+const MyToysTableBody = ({ m_toy, handelDelete, handelEdit, index }) => {
 
     const { _id, category, price, quantity, details, seller_name, product_name, photoURL } = m_toy;
 
@@ -11,7 +11,7 @@ const MyToysTableBody = ({ m_toy, handelDelete, handelEdit }) => {
         <>
             {/* row 1 */}
             <tr className='font-bold'>
-                {/* <td className='bg-cyan-400 rounded-lg text-center'>{index + 1}</td> */}
+                <td className='rounded-lg text-center'>{index + 1}</td>
                 <td className='text-center'>
                     <div className='avatar'>
                         <div className='rounded w-24'>
@@ -27,10 +27,10 @@ const MyToysTableBody = ({ m_toy, handelDelete, handelEdit }) => {
                 <td className='text-center'>{quantity}</td>
                 <td className='text-center rounded-lg'>
                     <Link to={`/update/${_id}`}>
-                    <button onClick={() => handelEdit(_id)} className='btn btn-outline btn-primary'>Edit</button>
+                    <button onClick={() => handelEdit(_id)} className='btn btn-info'>Edit</button>
                 </Link></td>
                 <td className='b text-center rounded-lg'>
-                    <button onClick={() => handelDelete(_id)} className='btn btn-outline btn-error'>Delete</button>
+                    <button onClick={() => handelDelete(_id)} className='btn btn-error'>Delete</button>
                 </td>
             </tr>
         </>

@@ -21,7 +21,7 @@ const Details = () => {
 
     return (
 
-        <div className="card hero-content flex-col lg:flex-row w-full bg-base-100 shadow-xl">
+        <div className="card hero-content flex-col lg:flex-row w-full bg-slate-100 shadow-xl">
             <img className='sm:w-full md:w-[50%] rounded-lg' src={photoURL} />
             <div className="card-body">
                 <h2 className="card-title"><span className='text-red-600'>Product:</span>{product_name}</h2>
@@ -54,7 +54,7 @@ const Details = () => {
                             Make Favourite
                         </button>
                         <Link to='/'>
-                            <button className="btn btn-primary gap-2"><FaArrowLeft />Back To Home</button>
+                            <button className="btn btn-info gap-2"><FaArrowLeft />Back To Home</button>
                         </Link>
                     </div>
                     <ToastContainer />

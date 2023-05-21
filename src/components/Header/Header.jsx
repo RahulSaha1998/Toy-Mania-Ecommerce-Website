@@ -17,13 +17,13 @@ const Header = () => {
     }
 
     const navItems = <>
-        <li> <Link to="/">Home</Link> </li>
-        <li> <Link to="/allToys">All Toys</Link> </li>
+        <li> <Link className='font-bold' to="/">Home</Link> </li>
+        <li> <Link className='font-bold' to="/allToys">All Toys</Link> </li>
         {user && <>
-            <li> <Link to="/myToys">My Toys</Link> </li>
-            <li> <Link to="/addToy">Add a Toy</Link> </li>
+            <li> <Link className='font-bold' to="/myToys">My Toys</Link> </li>
+            <li> <Link className='font-bold' to="/addToy">Add a Toy</Link> </li>
         </>}
-        <li> <Link to="/blogs">Blog</Link> </li>
+        <li> <Link className='font-bold' to="/blogs">Blog</Link> </li>
 
     </>
 
@@ -65,10 +65,10 @@ const Header = () => {
                                     </div>
                                 </div>
 
-                                <button className='btn btn-outline' onClick={handleLogOut}>Log out</button>
+                                <button className='btn btn-info' onClick={handleLogOut}>Log out</button>
 
                         </>
-                            : <Link to="/login"><button className='btn btn-outline'>Login</button></Link>
+                            : <Link to="/login"><button className='btn btn-info'>Login</button></Link>
                     }
                 </div>
             </div>

@@ -1,14 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { AuthContext } from '../../providers/AuthProvider';
 import useTitle from '../../hooks/useTitile';
+import Swal from 'sweetalert2';
 
 const Register = () => {
-
+    
     const [errors, setError] = useState('')
     const [success, setSuccess] = useState('');
     useTitle('Register')
+    const navigate = useNavigate();
 
 
     const { registerUser, logOut, updateUserData } = useContext(AuthContext)
@@ -37,8 +39,14 @@ const Register = () => {
                 form.reset();
                 setError('')
                 setSuccess('Successfully Register!');
-                // toast('Successfully Register!');
-                alert('successfully Register!');
+                Swal.fire({
+                    position: 'top-bottom',
+                    icon: 'success',
+                    title: 'Registration Successful!',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                  navigate('/login')
 
             })
             .catch(error => {

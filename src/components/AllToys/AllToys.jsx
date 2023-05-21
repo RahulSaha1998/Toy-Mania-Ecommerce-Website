@@ -43,6 +43,7 @@ const AllToys = () => {
                 <thead>
                     <tr>
                         <th className='text-center'>Serial</th>
+                        <th className='text-center'>Photo</th>
                         <th className='text-center'>Seller Name</th>
                         <th className='text-center'>Toy Name</th>
                         <th className='text-center'>Sub-Category</th>

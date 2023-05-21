@@ -22,45 +22,46 @@ const AddToy = () => {
         const quantity = form.quantity.value;
         const details = form.details.value;
 
-        const addedToy = { 
+        const addedToy = {
             product_name: name,
             photoURL,
             seller_name,
             email,
             category,
-            price, 
-            rating, 
-            quantity, 
-            details 
+            price,
+            rating,
+            quantity,
+            details
         };
         console.log(addedToy);
 
-        fetch('http://localhost:5000/toys',{
+        fetch('http://localhost:5000/toys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body : JSON.stringify(addedToy)
+            body: JSON.stringify(addedToy)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            if (data.insertedId) {
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Toy Added Successfully!',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                })
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Toy Added Successfully!',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
 
     }
 
     return (
-        <div className='bg-slate-300 rounded-lg shadow-cl mt-5'>
+        <div className='bg-slate-200 rounded-lg shadow-xl mt-5'>
             <div className='text-center'>
-                <h2 className='text-3xl font-bold'>Add Your Toy</h2>
+            <h2 className='font-semibold text-center text-3xl text-red-600'>Add Toys</h2>
+            <hr />
                 <div className="divider"></div>
             </div>
             <form onSubmit={handleAddToy} className='w-[80%] mx-auto '>
@@ -101,12 +102,16 @@ const AddToy = () => {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Sub-Category</span>
+                            <span className="label-text">Category</span>
                         </label>
-                        <input type="text" placeholder="Sub-category"
-                            name='category'
-                            className="input input-bordered"
-                            required />
+                        <select className="select select-bordered"
+                        name='category'
+                        required>
+                            <option disabled selected>Select Category</option>
+                            <option>car</option>
+                            <option>bike</option>
+                            <option>truck</option>
+                        </select>
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -121,10 +126,17 @@ const AddToy = () => {
                         <label className="label">
                             <span className="label-text">Rating</span>
                         </label>
-                        <input type="text" placeholder="Rating"
-                            name='rating'
-                            className="input input-bordered"
-                            required />
+                        <select className="select select-bordered"
+                        name='rating'
+                        required>
+                            <option disabled selected>Ratings</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>4.5</option>
+                            <option>5</option>
+                        </select>
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -146,7 +158,7 @@ const AddToy = () => {
                         required />
                 </div>
                 <div className="form-control mt-6 text-center">
-                    <input className="btn btn-block btn-primary mb-6" type="submit" value='Add Toy' />
+                    <input className="btn btn-block btn-info mb-6" type="submit" value='Add Toy' />
                 </div>
             </form>
         </div>

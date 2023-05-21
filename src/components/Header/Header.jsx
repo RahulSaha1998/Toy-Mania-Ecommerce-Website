@@ -16,15 +16,20 @@ const Header = () => {
             })
     }
 
-    const navItems = <>
-        <li> <Link className='font-bold' to="/">Home</Link> </li>
-        <li> <Link className='font-bold' to="/allToys">All Toys</Link> </li>
-        {user && <>
-            <li> <Link className='font-bold' to="/myToys">My Toys</Link> </li>
-            <li> <Link className='font-bold' to="/addToy">Add a Toy</Link> </li>
-        </>}
-        <li> <Link className='font-bold' to="/blogs">Blog</Link> </li>
 
+    const navItems = <>
+        
+        <li> <Link className='font-semibold' to="/">Home</Link> </li>
+        <li> <Link className='font-semibold' to="/allToys">All Toys</Link> </li>
+        {user && <>
+            <li> <Link className='font-semibold' to="/myToys">My Toys</Link> </li>
+            <li> <Link className='font-semibold' to="/addToy">Add a Toy</Link> </li>
+        </>}
+        <li> <Link className='font-semibold' to="/blogs">Blog</Link> </li>
+    </>
+
+    const btn = <>
+        <button className='btn btn-info' onClick={handleLogOut}>Log out</button>
     </>
 
     return (
@@ -36,6 +41,7 @@ const Header = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {navItems}
+                        {btn}
                     </ul>
                 </div>
 
@@ -43,7 +49,7 @@ const Header = () => {
                     <div className='text center lg:m-4'>
                         <Lottie className='w-24' animationData={g2}></Lottie>
                     </div>
-                    <div className='w-14 lg:w-52  '>
+                    <div className='w-14 lg:w-52 sm:hidden'>
                         <h2 className='font-bold lg:text-3xl'>TOY <span className='text-red-600 font-semibold'>Mania</span></h2>
                     </div>
                 </div>
@@ -59,13 +65,16 @@ const Header = () => {
                     {
                         user?.email ? <>
 
-                                <div className=' w-12 mt-1'>
-                                    <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-                                        <img className='rounded-full cursor-pointer' src={user?.photoURL} alt="" />
-                                    </div>
+                            <div className=' w-12 mt-1'>
+                                <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
+                                    <img className='rounded-full cursor-pointer' src={user?.photoURL} alt="" />
                                 </div>
-
-                                <button className='btn btn-info' onClick={handleLogOut}>Log out</button>
+                            </div>
+                            <div className="navbar-center hidden lg:flex">
+                                <ul className="menu menu-horizontal px-1">
+                                    {btn}
+                                </ul>
+                            </div>
 
                         </>
                             : <Link to="/login"><button className='btn btn-info'>Login</button></Link>
@@ -73,6 +82,7 @@ const Header = () => {
                 </div>
             </div>
         </div>
+
     );
 };
 

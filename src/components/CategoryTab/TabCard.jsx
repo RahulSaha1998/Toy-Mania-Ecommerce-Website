@@ -31,7 +31,7 @@ const TabCard = ({ r_data }) => {
 
     return (
         <div>
-            <div className="card w-full h-full bg-slate-100 shadow-xl">
+            <div className="card w-full h-full bg-slate-100 shadow-xl rounded-lg">
                 <figure className="px-10 pt-10">
                     <img src={photoURL} alt="Shoes" className="rounded-xl h-52" />
                 </figure>

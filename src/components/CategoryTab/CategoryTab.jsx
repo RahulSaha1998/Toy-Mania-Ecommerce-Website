@@ -51,7 +51,7 @@ const CategoryTab = () => {
                 </TabList>
 
                 <TabPanel className='bg-slate-300 rounded-lg shadow-xl'>
-                    <div className='grid lg:grid-cols-3 gap-5 p-10'>
+                    <div className='grid lg:grid-cols-3 gap-2 lg:gap-5 p-5'>
                         {
                             result.slice(0, 3).map(r_data => <TabCard
                                 key={r_data._id}
@@ -61,7 +61,7 @@ const CategoryTab = () => {
                     </div>
                 </TabPanel>
                 <TabPanel className='bg-slate-300 rounded-xl shadow-xl'>
-                    <div className='grid lg:grid-cols-3 gap-5 p-10'>
+                    <div className='grid lg:grid-cols-3 gap-2 lg:gap-5 p-5'>
                         {
                             result.slice(0, 3).map(r_data => <TabCard
                                 key={r_data._id}
@@ -71,7 +71,7 @@ const CategoryTab = () => {
                     </div>
                 </TabPanel>
                 <TabPanel className='bg-slate-300 rounded-xl shadow-xl'>
-                    <div className='grid lg:grid-cols-3 gap-5 p-10'>
+                    <div className='grid lg:grid-cols-3 gap-2 lg:gap-5 p-5'>
                         {
                             result.slice(0, 3).map(r_data => <TabCard
                                 key={r_data._id}

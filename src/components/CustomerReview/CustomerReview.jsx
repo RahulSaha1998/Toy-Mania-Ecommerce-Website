@@ -13,7 +13,7 @@ const CustomerReview = () => {
              <h2 className='font-semibold text-center text-3xl mt-10 mb-3 text-red-600'>Customer Reviews</h2>
              <hr />
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5'>
-            <div className="card w-96 mx-auto bg-base-200 shadow-xl rounded-lg">
+            <div className="card w-100 mx-auto bg-base-200 shadow-xl rounded-lg">
                 <div className='w-32 mx-auto'>
                     <Lottie animationData={user2}></Lottie>
                 </div>
@@ -31,7 +31,7 @@ const CustomerReview = () => {
                     
                 </div>
             </div>
-            <div className="card w-96 mx-auto bg-base-200 shadow-xl rounded-lg">
+            <div className="card w-100 mx-auto bg-base-200 shadow-xl rounded-lg">
                 <div className='w-32 mx-auto'>
                     <Lottie animationData={user1}></Lottie>
                 </div>
@@ -49,7 +49,7 @@ const CustomerReview = () => {
                     
                 </div>
             </div>
-            <div className="card w-96 mx-auto bg-base-200 shadow-xl rounded-lg">
+            <div className="card w-100 mx-auto bg-base-200 shadow-xl rounded-lg">
                 <div className='w-32 mx-auto'>
                     <Lottie animationData={user2}></Lottie>
                 </div>

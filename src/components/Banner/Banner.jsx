@@ -1,11 +1,19 @@
 import React from 'react';
 import Lottie from "lottie-react";
 import g4 from '../../../public/g4.json'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Banner = () => {
+
+    const handleExplore= () => {
+        toast("Let's Explore The Website!!");
+      };
+
     return (
-      <div className='md:grid grid-cols-2 justify-center p-5 card bg-slate-100'>
+      <div className='md:grid grid-cols-2 justify-center p-5 card bg-slate-100 rounded-lg'>
       <div className='m-5'>
           <div className='lg:mt-20 lg:grid grid-rows-1 justify-center'>
               <h4 className='text-start text-4xl font-semibold'>Toys Can Make <br /> Our Childhood <br /> <span className='text-red-600'>Memorable!</span></h4>
@@ -13,7 +21,7 @@ const Banner = () => {
               Toys are important, formative components in children's lives. They entertain as well as teach, and they may do both with positive and negative consequences.
               </p>
               <div className='text-start mt-3'>
-                  <button className="btn btn-info">Lets Explore</button>
+                  <button onClick={handleExplore} className="btn btn-info">Lets Explore</button>
               </div>
           </div>
       </div>
@@ -23,6 +31,7 @@ const Banner = () => {
               <Lottie animationData={g4}></Lottie>
           </div>
       </div>
+      <ToastContainer position="top-center"/>
   </div>
     );
 };

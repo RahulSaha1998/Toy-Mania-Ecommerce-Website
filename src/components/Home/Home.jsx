@@ -8,6 +8,7 @@ import useTitle from '../../hooks/useTitile';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import Animations from '../Animations/Animations';
+import CustomerReview from '../CustomerReview/CustomerReview';
 
 
 const Home = () => {
@@ -37,6 +38,9 @@ const Home = () => {
             </div>
             <div className='overflow-hidden' data-aos="fade-left">
                 <Gallery></Gallery>
+            </div>
+            <div className='overflow-hidden' data-aos="fade-down">
+                <CustomerReview></CustomerReview>
             </div>
         </div>
     );

@@ -44,7 +44,7 @@ const AllToyTableBody = ({ toy, index }) => {
                 <td className='text-center'>{'$' + price}</td>
                 <td className='text-center'>{quantity}</td>
                 <td className='text-center rounded-lg'><Link to={`/details/${_id}`}>
-                    <button onClick={() => handleViewDetails(_id)} className='btn btn-info gap-2'>View Details<FaArrowRight /></button>
+                    <button onClick={() => handleViewDetails(_id)} className='btn btn-info'>View Details</button>
                 </Link></td>
             </tr>
         </>

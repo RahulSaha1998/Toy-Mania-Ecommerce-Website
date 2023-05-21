@@ -17,7 +17,7 @@ const MyToys = () => {
   }, [sortOrder]);
 
   const fetchToys = () => {
-    const url = `http://localhost:5000/myToys?email=${user?.email}&sort=${sortOrder === 1 ? "asc" : "desc"}`;
+    const url = `https://toy-marketplace-server-side-jet.vercel.app/myToys?email=${user?.email}&sort=${sortOrder === 1 ? "asc" : "desc"}`;
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -43,7 +43,7 @@ const MyToys = () => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://toy-marketplace-server-side-jet.vercel.app/toys/${_id}`, {
           method: 'DELETE',
         })
           .then(res => res.json())

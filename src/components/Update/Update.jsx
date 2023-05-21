@@ -6,7 +6,7 @@ import useTitle from '../../hooks/useTitile';
 
 const Update = () => {
     const toy = useLoaderData();
-    const { _id, price, quantity, details, email, seller_name} = toy;
+    const { _id, price, quantity, details, email, seller_name } = toy;
 
     console.log(seller_name);
 
@@ -28,7 +28,7 @@ const Update = () => {
             details,
         };
 
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://toy-marketplace-server-side-jet.vercel.app/toys/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -59,24 +59,24 @@ const Update = () => {
                 <div className="divider"></div>
             </div>
             <form onSubmit={handleUpdatedToy} className='w-[80%] mx-auto '>
-            
+
                 <div className='grid grid-cols-2 gap-5'>
-                <div className="form-control">
+                    <div className="form-control">
                         <label className="label">
                             <span className="label-text">Seller</span>
                         </label>
-                        <input type="text" 
+                        <input type="text"
                             name='s_name'
                             className="input input-bordered"
                             defaultValue={seller_name}
                             readOnly
                         />
                     </div>
-                <div className="form-control">
+                    <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="text" 
+                        <input type="text"
                             name='email'
                             className="input input-bordered"
                             defaultValue={email}

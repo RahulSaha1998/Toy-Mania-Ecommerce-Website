@@ -38,8 +38,8 @@ const AllToyTableBody = ({ toy, index }) => {
                         </div>
                     </div>
                 </td>
-                <td className='text-center'>{seller_name}</td>
                 <td className='text-center '>{product_name}</td>
+                <td className='text-center'>{seller_name}</td>
                 <td className='text-center'>{category}</td>
                 <td className='text-center'>{'$' + price}</td>
                 <td className='text-center'>{quantity}</td>

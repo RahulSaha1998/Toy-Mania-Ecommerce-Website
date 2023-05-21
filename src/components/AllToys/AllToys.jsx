@@ -44,8 +44,8 @@ const AllToys = () => {
                     <tr>
                         <th className='text-center'>Serial</th>
                         <th className='text-center'>Photo</th>
-                        <th className='text-center'>Seller Name</th>
                         <th className='text-center'>Toy Name</th>
+                        <th className='text-center'>Seller Name</th>
                         <th className='text-center'>Sub-Category</th>
                         <th className='text-center'>Price</th>
                         <th className='text-center'>Available Quantity</th>

@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       {
         path: '/allToys',
         element: <AllToys></AllToys>,
-        loader: () => fetch('http://localhost:5000/toys')
+        loader: () => fetch('https://toy-mania-ecommerce-server-side-mai.vercel.app/toys')
       },
       {
         path: '/addToy',
@@ -57,12 +57,12 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+        loader: ({ params }) => fetch(`https://toy-mania-ecommerce-server-side-mai.vercel.app/toys/${params.id}`)
       },
       {
         path: '/update/:id',
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+        loader: ({ params }) => fetch(`https://toy-mania-ecommerce-server-side-mai.vercel.app/toys/${params.id}`)
       },
 
     ]

@@ -35,7 +35,7 @@ const AddToy = () => {
         };
         console.log(addedToy);
 
-        fetch('http://localhost:5000/toys', {
+        fetch('https://toy-mania-ecommerce-server-side-mai.vercel.app/toys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

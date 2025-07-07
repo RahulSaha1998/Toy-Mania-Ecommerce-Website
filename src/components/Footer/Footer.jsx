@@ -11,7 +11,7 @@ const Footer = () => {
                     <p className="font-bold">
                         TOY Mania Ltd. <br />Providing reliable toy since 1992
                     </p>
-                    <p className="font-bold">Copyright © 2023 - All right reserved</p>
+                    <p className="font-bold">Copyright © 2025 - All right reserved</p>
                     <div className='lg:flex gap-3'>
                         <p className="font-bold">Contact: 01777440174</p>
                         <p className="font-bold sm:m-1 lg:m-0">Email: rahulsaha87928@gmail.com</p>

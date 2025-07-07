@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "practice-project-p1"
-  }
+    "default": "practice-project-p1",
+    "dist": "toy-mania-c7e56"
+  },
+  "targets": {},
+  "etags": {}
 }

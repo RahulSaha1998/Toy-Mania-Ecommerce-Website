@@ -1,17 +1,16 @@
-## Hello, there is some features and live website link of this project.
+## Hello, there are some features and a live website link of this project.
 
-- Firebase Live Link -> https://practice-project-p1.web.app/
+- Firebase Live Link -> https://toy-mania-c7e56.web.app/
 
 
-- First we create a navbar and there contains a name and some links and the navbar and footer is common for all the roots except 404 page.
-- Than the banner section of lottieFiles.
-- Then the gallery section with lottie files.
+- First, we create a navbar that contains a name and some links, and the navbar and footer are common for all the routes except the 404 page.
+- Then the banner section of LottieFiles.
+- Then the gallery section with Lottie files.
 - Then the category section.
 - and the marquee section,
 - and the customer review section,
 - and the footer.
-- there are chef view details is private if any one login than he can show the route.
-- there is a blog section.
-- there are using mongdb for data base.first-letter:-and the crud operation also is in the project.
--Basically this is a full stack project.
--Backend and Frontend is existing for the project.
+- There is a blog section.
+- They are using MongoDB for the database.first-letter:-and the CRUD operation is also in the project.
+- Basically, this is a full-stack project.
+- Backend and Frontend exist for the project.
